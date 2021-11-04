@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+
+.Canvas2DStyle, .Canvas3DStyle, .ControlsStyle{
+  border: 1px solid  darkblue;
+  /* position: absolute; */
+   width: 500px; 
+}
+
+
+
