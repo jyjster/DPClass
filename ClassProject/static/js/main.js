@@ -11,8 +11,12 @@ function onLoad() {
   _currentElementClass = EllipseOnePointElement;
 
   // load any resources, media, etc.
-  _human3D = _2DView.p5.loadModel('media/male-export.obj', false);
+  _human3D = _2DView.p5.loadModel('media/human3D.obj', false);
   _human2D = _3DView.p5.loadImage('media/human2D.png');
+
+  
+  var anElement = new EllipseOnePointElement([{x:100, y: 100, z:0}]);
+  _elementList.push(anElement);
 
 
 

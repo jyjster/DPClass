@@ -44,7 +44,8 @@ var sketch2D = function (p5) {
       _currentPointList.pop();  // remove the current mouse point
     }
 
-    //!Class: your 2D draw functionality here
+    //!Class: your 2D draw functionality here, or objects that are not included in classes  like ground plane, etc.
+    
 
 
 
@@ -212,6 +213,7 @@ var sketch3D = function (p5) {
     drawAxes(p5, 100);
 
     for (i = 0; i < _elementList.length; i++) _elementList[i].draw3D(p5); // Draw the 3D elements
+    
 
 
     //End Class: your 3D draw functionality here

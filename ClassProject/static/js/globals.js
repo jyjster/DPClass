@@ -11,10 +11,11 @@ var _yGrid = 40;
 var _2DView;
 var _3DView;
 
-var _human3D;
-var _human2D;
 
 var _ambientVal = 50;
+
+var _human3D;
+var _human2D;
 
 //!Class: define your global variables here
 

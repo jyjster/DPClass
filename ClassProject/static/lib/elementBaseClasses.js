@@ -1,14 +1,18 @@
 /////////////////////////////////   Element   ///////////////////////////////////
 class Element {
   constructor() {
-    this.size = { "x": 10, "y": 10, "z": 10 };
+    // These are system parameters, be careful changing or overwriting these in your classes
+    this.class = this.constructor.name;
+    this.children = [];
     this.points = [];
     this.selected = false;
+
+    // feel free to modifty these in the base class or subclasses
+    this.size = { "x": 10, "y": 10, "z": 10 };
     this.color = "#888888";
-    this.class = this.constructor.name;
     this.rotation = 0;
     this.opacity = 1;
-    this.children = null;
+
 
   }
   draw2D(ap5) { };
