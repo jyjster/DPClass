@@ -236,7 +236,8 @@ var house_3D = function (p5) {
     p5.orbitControl();
     p5.push(); // A STARTING PUSH - JUST TO BE SURE
     p5.rotateX(p5.radians(90)); // always start with this - rotates the model over so +Z is up the screen
-    p5.rotateX(-PI / 6); // this gives us a slight angle to start
+    // p5.rotateX(-PI / 6); // this gives us a slight angle to start
+    p5.rotateX(p5.radians(-30)); // this gives us a slight angle to start
 
     //!Class: your 3D draw functionality here
     // p5.background(_ambientVal);
@@ -315,7 +316,7 @@ var house_3D = function (p5) {
     // TRANSFORMATIONS
     p5.translate(-187, 60, 30); // move to its new location
     p5.rotateZ(p5.radians(-90)); // spin about vertical axis
-    p5.drawAxes(30); // drawAxes before drawing objects if you get confused about the local coordianates
+    // p5.drawAxes(30); // drawAxes before drawing objects if you get confused about the local coordianates
     p5.model(fridge);
     p5.pop();
 
