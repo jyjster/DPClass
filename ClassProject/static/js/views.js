@@ -2,8 +2,8 @@
 // Contains: 
 // the View classes:
 //  - View
-//  - View2D
-//  - View3D
+//  - pie_chart
+//  - house_3D
 //  - ViewTable
 // the pie_chart and house_3D functions referenced into View2D and View3D 
 //    that override the P5 behavior for each (2D, 3D) Views 
@@ -295,7 +295,6 @@ var house_3D = function (p5) {
     p5.model(furniture_2);
     p5.model(furniture_3);
     p5.pop();
-    //End Class: your 3D draw functionality here
 
     //////////////////////////////    STAIRS       //////////////////////
     p5.push();
@@ -313,7 +312,7 @@ var house_3D = function (p5) {
     p5.ambientMaterial(241, 146, 130); // MATERIAL #3
     // TRANSFORMATIONS
     p5.translate(-187, 60, 30); // move to its new location
-    p5.rotateZ(radians(-90)); // spin about vertical axis
+    p5.rotateZ(p5.radians(-90)); // spin about vertical axis
     p5.drawAxes(30); // drawAxes before drawing objects if you get confused about the local coordianates
     p5.model(fridge);
     p5.pop();
@@ -357,7 +356,8 @@ var house_3D = function (p5) {
     p5.box(5,5,5);
     //box([width], [Height], [depth], [detailX], [detailY])
     p5.pop();
-
+    
+    //End Class: your 3D draw functionality here
     p5.pop();
   }
 
