@@ -115,11 +115,13 @@ var pie_chart = function (p5) {
   p5.keyPressed = function () {
     if (p5.keyCode === p5.LEFT_ARROW) {
       for (i = 0; i < _elementList.length; i++) {
-        if (_elementList[i].selected) _elementList[i].rotation += p5.PI / 2;
+        // if (_elementList[i].selected) _elementList[i].rotation += p5.PI / 2;
+        if (_elementList[i].selected) _elementList[i].rotation += p5.radians(90);
       }
     } else if (p5.keyCode === p5.RIGHT_ARROW) {
       for (i = 0; i < _elementList.length; i++) {
-        if (_elementList[i].selected) _elementList[i].rotation -= p5.PI / 2;
+        // if (_elementList[i].selected) _elementList[i].rotation -= p5.PI / 2;
+        if (_elementList[i].selected) _elementList[i].rotation -= p5.radians(90);
       }
     }
 
