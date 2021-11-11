@@ -14,23 +14,104 @@ var pie_chart = function (p5) {
 
   p5.lastpoint = null;
 
+  ////////////Example///////////////////
+  let og_data = [30, 10, 45, 35, 60, 38, 75, 67];
+
+  // https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/
+  // spread operator does not copy nested data, but works here because shallow copy
+  var current_data = [...og_data];
+  var color_1_str = 'grey';
+  var color_2_str = 'grey';
+  var rect_color = "#FFFFFF";
+
+  // console.log(current_data);
+
+  // if any key is pressed, chechKey
+  // document.onkeydown = checkKey;
+
+
 
   /////////////////////   2D setup() function     ////////////////////////
   p5.setup = function () {
-    var acanvas = p5.createCanvas(500, 400);
-    acanvas.parent("Canvas2DDIV");
+    // var acanvas = p5.createCanvas(500, 400);
+    var myCanvas = createCanvas(720, 500);
+    // acanvas.parent("Canvas2DDIV");
+    myCanvas.parent("myCanvasDiv");
 
+    p5.noStroke();
     //!CLASS: Your 2D setup here
-    p5.background(51);
+    // p5.background(51);
 
   }
 
   /////////////////////   2D draw() function     ////////////////////////
-  p5.draw = function () {
-    p5.push();
-    p5.background(255);
-    this.setGrid();
-    // this.drawGrid();
+  p5.draw = function() {
+    // background(100);
+    // background(0,255,0);
+    p5.background(rect_color);
+    pieChart(300, current_data);
+  }
+  
+  /////////////////////   pie chart function     ////////////////////////
+  function pieChart(diameter, data) {
+    // console.log("test:", data);
+    var my_color_1, my_color_2;
+  
+    let lastAngle = 0;
+  
+    for (let i = 0; i < data.length; i++) {
+      let color_val = p5.map(i, 0, data.length, 0, 255);
+      // 255 - colorval
+      // if data is an even number
+      if (i % 2 == 0) {
+        if (color_1_str == 'red') {
+          p5.fill(255, color_val, 0);
+        }
+        else if (color_1_str == 'green'){
+          p5.fill(0, color_val, 0);
+          // fill (0, 255, color_val); // green
+        }
+        else if (color_1_str == 'blue') {
+          p5.fill(0,color_val, 255);
+        }
+        else {
+          p5.fill(color_val, color_val, color_val);
+        }
+      }
+      else {
+        if (color_2_str == 'red') {
+          p5.fill(255, 255-color_val, 0);
+        }
+        else if (color_2_str == 'green'){
+          p5.fill(0, 255, 255-color_val);
+        }
+        else if (color_2_str == 'blue') {
+          p5.fill(0,255-color_val, 255);
+        }
+        else {
+          p5.fill(255-color_val, 255-color_val, 255-color_val);
+        }
+      }
+  
+      p5.arc(
+        width / 2,
+        height / 2,
+        diameter,
+        diameter,
+        lastAngle,
+        lastAngle + p5.radians(current_data[i])
+      );
+      lastAngle += p5.radians(current_data[i]);
+      
+    }
+  }
+  
+  
+  // p5.draw = function () {
+  //   p5.push();
+  //   p5.background(255);
+  //   this.setGrid();
+  //   // this.drawGrid();
 
     // Draw the 2D elements
     for (var i = 0; i < _elementList.length; i++) { _elementList[i].draw2D(p5); }
@@ -184,7 +265,7 @@ var pie_chart = function (p5) {
     
   }
 
-}
+
 
 /////////////////////      house_3D function - generates a P5 instance for the 3D view  ///////////////////////
 var house_3D = function (p5) {
