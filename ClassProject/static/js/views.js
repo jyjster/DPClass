@@ -121,6 +121,7 @@ var pie_chart = function (p5) {
 
 /////////////////////      house_3D function - generates a P5 instance for the 3D view  ///////////////////////
 var house_3D = function (p5) {
+    var zoom = 0.50;
 
   //define variables for our media
     // IMAGE TEXTURES
@@ -193,6 +194,9 @@ var house_3D = function (p5) {
 
     // for (i = 0; i < _elementList.length; i++) _elementList[i].draw3D(p5); // Draw the 3D elements
     
+    p5.scale(zoom);
+    p5.translate(350,0,0);
+
     //////////////////////////////    FLOOR 1          //////////////////////
     p5.push();
     p5.noStroke();
