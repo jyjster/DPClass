@@ -138,6 +138,8 @@ var house_3D = function (p5) {
     let fridge;
     let dryer;
 
+
+
   /////////////////////   3D preload() function     ////////////////////////
 
   p5.preload = function() {
@@ -195,7 +197,7 @@ var house_3D = function (p5) {
     // for (i = 0; i < _elementList.length; i++) _elementList[i].draw3D(p5); // Draw the 3D elements
     
     p5.scale(zoom);
-    p5.translate(350,0,0);
+    p5.translate(30,0,100);
 
     //////////////////////////////    FLOOR 1          //////////////////////
     p5.push();
@@ -272,7 +274,10 @@ var house_3D = function (p5) {
     //////////////////////////////  OVEN (hardcoded, 3d primitive)  //////////////////////
     p5.push();
     p5.noStroke();
-    p5.ambientMaterial(241, 146, 130);
+
+    // p5.ambientMaterial(241, 146, 130);
+    p5.ambientMaterial(oven_color.r, oven_color.g, oven_color.b);
+
     // ambientMaterial(255, 0, 0);
     // TRANSFORMATIONS
     // translate(0,0,0)

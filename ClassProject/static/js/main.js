@@ -27,6 +27,12 @@ function onClassChange(aclass) {
   _currentElementClass = eval(aclass);
 }
 
+function change_oven_color() {
+  oven_color.r = 0;
+  oven_color.g = 0;
+  oven_color.b = 255;
+}
+
 function onChangeAmbientValue(aval) {
   _ambientVal = aval;
 

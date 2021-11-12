@@ -19,5 +19,51 @@ var _human2D;
 
 //!Class: define your global variables here
 
+var oven_color = 
+    {
+    r: 241,
+    g: 146,
+    b: 130
+    }
 
+
+// _elements = [
+//     {
+//         name: "Name01",
+//         color: "#FF0000",
+
+//         points: [
+//             {
+//                 x: 100,
+//                 y: 100,
+//                 z: 100,
+//             }
+//         ],
+
+//         size: {
+//             x: 100,
+//             y: 100,
+//             z: 100,
+//         }
+//     },
+
+//     {
+//         name: "Name02",
+//         color: "#FFFF00",
+
+//         points: [
+//             {
+//                 x: 100,
+//                 y: 100,
+//                 z: 100,
+//             }
+//         ],
+
+//         size: {
+//             x: 100,
+//             y: 100,
+//             z: 100,
+//         }
+//     }
+// ];
 
