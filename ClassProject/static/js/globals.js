@@ -2,11 +2,17 @@
 // defines all the global variables. This file is loaded early to ensure every other function that references global variables is defined AFTER the global variables are. 
 
 var appliance_default_color = 
+    // {
+    //     r: 241,
+    //     g: 146,
+    //     b: 130
+    // }
     {
-        r: 241,
-        g: 146,
-        b: 130
+        r: 214,
+        g: 214,
+        b: 214
     }
+
 
 var appliance_list = [
     {

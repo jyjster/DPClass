@@ -34,25 +34,42 @@
             <h3> Click on a circuit to view its data </h3>
 
             <!-- <h4> Circuits </h4> -->
+            <label class="blue">
             <input
               type="radio"
+              value="blue"
               id = "oven"
               name="ElementClassButtons"
               onclick="change_appliance_color('oven')">
-              Oven <br>
+              Oven 
+              <div class="layer"></div>
+              <div class="button"><span></span></div>
+            </label>
+            <br>
+            <label class="red">
             <input 
               type="radio" 
+              value="red"
               id = "fridge"
               name="ElementClassButtons" 
               onclick="change_appliance_color('fridge')"> 
-              Fridge <br>
-
+              Fridge 
+              <div class="layer"></div>
+              <div class="button"><span></span></div>
+            </label>  
+            <br>
+            <label class="green">
             <input 
-              type="radio" 
+              type="radio"
+              value="green" 
               id = "dryer"
               name="ElementClassButtons" 
-              checked onclick="change_appliance_color('dryer')"> 
-              Dryer <br>
+              onclick="change_appliance_color('dryer')"> 
+              Dryer 
+              <div class="layer"></div>
+              <div class="button"><span></span></div>
+            </label> 
+            <br>
 
             <!-- <input 
               type="radio"
@@ -63,15 +80,21 @@
 
             <!-- <h4> Ambient</h4>
             <input type="range" min=0 max=255 id="ambientvalue" onchange="onChangeAmbientValue(this.value)"><br> -->
+            
           </div>
         </td>
 
         <td>
-          <div id="myCanvasDiv" class="Canvas2DStyle"> </div>
+          
+          <div id="myCanvasDiv" class="Canvas2DStyle"> 
+          Electric Loads By Circuit
+          </div>
         </td>
 
         <td>
-          <div id="Canvas3DDIV" class="Canvas3DStyle"> </div>
+          <div id="Canvas3DDIV" class="Canvas3DStyle"> 
+           <!-- Location of Electrical Appliance(s) in House -->
+          </div>
         </td>
 
       </tr>

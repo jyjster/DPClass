@@ -279,6 +279,8 @@ var house_3D = function (p5) {
     //////////////////////////////    STAIRS       //////////////////////
     p5.push();
     p5.noStroke();
+
+   
     {
       p5.texture(wood_2);
       p5.model(stairs);
