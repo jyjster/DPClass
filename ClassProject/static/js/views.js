@@ -15,7 +15,7 @@ var pie_chart = function (p5) {
   p5.lastpoint = null;
 
   ////////////Example///////////////////
-  let og_data = [30, 10, 45, 35, 60, 38, 75, 67];
+  // let og_data = [30, 10, 45, 35, 60, 38, 75, 67];
 
 
   // https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/
@@ -57,6 +57,7 @@ var pie_chart = function (p5) {
     // background(100);
     // background(0,255,0);
     p5.background(rect_color);
+    p5.translate(-150,0);
     pieChart(300, current_data);
   }
   
@@ -69,8 +70,19 @@ var pie_chart = function (p5) {
   
   
     for (let i = 0; i < data.length; i++) {
-      let gray = p5.map(i, 0, data.length, 0, 255);
-      p5.fill(gray);
+      
+
+      if (appliance_list[i].selected == true) {
+        p5.fill(appliance_list[i].select_color.r, appliance_list[i].select_color.g, appliance_list[i].select_color.b)
+      }
+      else {
+        let gray = p5.map(i, 0, data.length, 0, 255);
+        p5.fill(gray);
+      }
+     
+      
+
+
       p5.arc(
         p5.width / 2,
         p5.height / 2,

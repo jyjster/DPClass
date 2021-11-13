@@ -35,8 +35,11 @@ function change_appliance_color(appliance) {
     appliance_list[i].current_color.g = appliance_default_color.g;
     appliance_list[i].current_color.b = appliance_default_color.b;
 
+    appliance_list[i].selected = false;
+
     // if the appliance list item is the appliance that was called/passed in, then change that appliance's current color to its selct color
     if (appliance_list[i].name == appliance) {
+      appliance_list[i].selected = true;
       appliance_list[i].current_color.r = appliance_list[i].select_color.r;
       appliance_list[i].current_color.g = appliance_list[i].select_color.g;
       appliance_list[i].current_color.b = appliance_list[i].select_color.b;
