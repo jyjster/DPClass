@@ -8,11 +8,17 @@ canvas {
 }
 
 
-.Canvas2DStyle, .Canvas3DStyle, .ControlsStyle{
+.Canvas2DStyle, .Canvas3DStyle{
   border: 1px solid  darkblue;
   /* position: absolute; */
    width: 500px; 
 }
 
+
+.ControlsStyle{
+  border: 1px solid  darkblue;
+  /* position: absolute; */
+   width: 100px; 
+}
 
 
