@@ -17,9 +17,17 @@ var pie_chart = function (p5) {
   ////////////Example///////////////////
   let og_data = [30, 10, 45, 35, 60, 38, 75, 67];
 
+
   // https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/
   // spread operator does not copy nested data, but works here because shallow copy
-  var current_data = [...og_data];
+  // var current_data = [...og_data];
+
+  var current_data = [];
+
+  for (let i = 0; i < appliance_list.length; i++) {
+    current_data[i] = appliance_list[i].e_load;
+  }
+
   var color_1_str = 'grey';
   var color_2_str = 'grey';
   var rect_color = "#FFFFFF";

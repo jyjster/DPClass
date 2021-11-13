@@ -22,7 +22,8 @@ var appliance_list = [
             r: appliance_default_color.r,
             g: appliance_default_color.g,
             b: appliance_default_color.b
-        }
+        }, 
+    e_load: 100
     },
     {
     name: "fridge", 
@@ -37,7 +38,8 @@ var appliance_list = [
             r: appliance_default_color.r,
             g: appliance_default_color.g,
             b: appliance_default_color.b
-        }
+        },
+    e_load: 60
     },
 
     {
@@ -53,23 +55,24 @@ var appliance_list = [
             r: appliance_default_color.r,
             g: appliance_default_color.g,
             b: appliance_default_color.b
-        }
-    },
-    {
-    name: "car_charger", 
-    select_color:
-        {
-            r: 100,
-            g: 100,
-            b: 0
         },
-    current_color:
-        {
-            r: appliance_default_color.r,
-            g: appliance_default_color.g,
-            b: appliance_default_color.b
-        }
-    }
+    e_load: 200
+    },
+    // {
+    // name: "car_charger", 
+    // select_color:
+    //     {
+    //         r: 100,
+    //         g: 100,
+    //         b: 0
+    //     },
+    // current_color:
+    //     {
+    //         r: appliance_default_color.r,
+    //         g: appliance_default_color.g,
+    //         b: appliance_default_color.b
+    //     }
+    // }
 ]
 
 var _elementList = [];
