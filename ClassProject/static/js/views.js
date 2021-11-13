@@ -251,7 +251,9 @@ var house_3D = function (p5) {
     p5.push();
     p5.noStroke();
 
-    p5.ambientMaterial(241, 146, 130); // MATERIAL #3
+    // p5.ambientMaterial(241, 146, 130); // MATERIAL #3
+    p5.ambientMaterial(fridge_color.r, fridge_color.g, fridge_color.b);
+
     // TRANSFORMATIONS
     p5.translate(-187, 60, 30); // move to its new location
     p5.rotateZ(p5.radians(-90)); // spin about vertical axis

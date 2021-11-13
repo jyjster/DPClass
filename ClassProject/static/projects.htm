@@ -34,9 +34,20 @@
             <h3> Controls </h3>
 
             <h4> Classes </h4>
-            <input type="radio" name="ElementClassButtons" onclick="change_oven_color()"> Oven <br>
-            <input type="radio" name="ElementClassButtons" checked onclick="onClassChange('HumanElement')"> Fridge <br>
-            <input type="radio" name="ElementClassButtons" onclick="onClassChange('MultiPointWallElement')"> Dryer <br>
+            <input
+              type="radio"
+              id = "oven"
+              name="ElementClassButtons"
+              onclick="change_oven_color()">
+              Oven <br>
+            <input 
+              type="radio" 
+              id = "fridge"
+              name="ElementClassButtons" 
+              onclick="change_fridge_color()"> 
+              Fridge <br>
+
+            <input type="radio" name="ElementClassButtons" checked onclick="onClassChange('MultiPointWallElement')"> Dryer <br>
             <input type="radio" name="ElementClassButtons" onclick="onClassChange('TwoPointBoxElement')"> Car Charger <br>
 
             <h4> Ambient</h4>

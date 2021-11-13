@@ -28,9 +28,45 @@ function onClassChange(aclass) {
 }
 
 function change_oven_color() {
-  oven_color.r = 0;
-  oven_color.g = 0;
-  oven_color.b = 255;
+  if (document.getElementById("oven").checked == true) {
+    oven_color.r = oven_color_selected.r;
+    oven_color.g = oven_color_selected.g;
+    oven_color.b = oven_color_selected.b;
+    console.log("oven checked true");
+    //console.log(document.getElementById("fridge").checked)
+    change_fridge_color();
+  
+  }
+  else {
+    oven_color.r = oven_color_default.r;
+    oven_color.g = oven_color_default.g;
+    oven_color.b = oven_color_default.b;
+    console.log("not checked")
+  }
+
+  // oven_color.r = 0;
+  // oven_color.g = 0;
+  // oven_color.b = 255;
+
+  
+}
+
+function change_fridge_color() {
+  if (document.getElementById("fridge").checked == true) {
+    fridge_color.r = fridge_color_selected.r;
+    fridge_color.g = fridge_color_selected.g;
+    fridge_color.b = fridge_color_selected.b;
+    console.log(" fridge checked true");
+    //console.log(document.getElementById("oven").checked)
+    change_oven_color();
+  }
+  else {
+    fridge_color.r = fridge_color_default.r;
+    fridge_color.g = fridge_color_default.g;
+    fridge_color.b = fridge_color_default.b;
+    console.log("not checked")
+  }
+  
 }
 
 function onChangeAmbientValue(aval) {

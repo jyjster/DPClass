@@ -19,11 +19,44 @@ var _human2D;
 
 //!Class: define your global variables here
 
-var oven_color = 
+var oven_color_default = 
     {
     r: 241,
     g: 146,
     b: 130
+    }
+
+var oven_color_selected = 
+    {
+    r: 0,
+    g: 0,
+    b: 255
+    }
+
+var oven_color = {
+    r: oven_color_default.r,
+    g: oven_color_default.g,
+    b: oven_color_default.b 
+    }
+
+var fridge_color_default = 
+    {
+    r: 241,
+    g: 146,
+    b: 130
+    }
+
+var fridge_color_selected = 
+    {
+    r: 0,
+    g: 0,
+    b: 255
+    }
+
+var fridge_color = {
+    r: fridge_color_default.r,
+    g: fridge_color_default.g,
+    b: fridge_color_default.b 
     }
 
 
