@@ -67,40 +67,10 @@ var pie_chart = function (p5) {
   
     let lastAngle = 0;
   
-    for (let i = 0; i < data.length; i++) {
-      let color_val = p5.map(i, 0, data.length, 0, 255);
-      // 255 - colorval
-      // if data is an even number
-      if (i % 2 == 0) {
-        if (color_1_str == 'red') {
-          p5.fill(255, color_val, 0);
-        }
-        else if (color_1_str == 'green'){
-          p5.fill(0, color_val, 0);
-          // fill (0, 255, color_val); // green
-        }
-        else if (color_1_str == 'blue') {
-          p5.fill(0,color_val, 255);
-        }
-        else {
-          p5.fill(color_val, color_val, color_val);
-        }
-      }
-      else {
-        if (color_2_str == 'red') {
-          p5.fill(255, 255-color_val, 0);
-        }
-        else if (color_2_str == 'green'){
-          p5.fill(0, 255, 255-color_val);
-        }
-        else if (color_2_str == 'blue') {
-          p5.fill(0,255-color_val, 255);
-        }
-        else {
-          p5.fill(255-color_val, 255-color_val, 255-color_val);
-        }
-      }
   
+    for (let i = 0; i < data.length; i++) {
+      let gray = p5.map(i, 0, data.length, 0, 255);
+      p5.fill(gray);
       p5.arc(
         p5.width / 2,
         p5.height / 2,
@@ -110,12 +80,60 @@ var pie_chart = function (p5) {
         lastAngle + p5.radians(current_data[i])
       );
       lastAngle += p5.radians(current_data[i]);
-      
-    }
+      }
   }
+}
+
+
+    // for (let i = 0; i < data.length; i++) {
+    //   let color_val = p5.map(i, 0, data.length, 0, 255);
+    //   // 255 - colorval
+    //   // if data is an even number
+    //   if (i % 2 == 0) {
+    //     if (color_1_str == 'red') {
+    //       p5.fill(255, color_val, 0);
+    //     }
+    //     else if (color_1_str == 'green'){
+    //       p5.fill(0, color_val, 0);
+    //       // fill (0, 255, color_val); // green
+    //     }
+    //     else if (color_1_str == 'blue') {
+    //       p5.fill(0,color_val, 255);
+    //     }
+    //     else {
+    //       p5.fill(color_val, color_val, color_val);
+    //     }
+    //   }
+    //   else {
+    //     if (color_2_str == 'red') {
+    //       p5.fill(255, 255-color_val, 0);
+    //     }
+    //     else if (color_2_str == 'green'){
+    //       p5.fill(0, 255, 255-color_val);
+    //     }
+    //     else if (color_2_str == 'blue') {
+    //       p5.fill(0,255-color_val, 255);
+    //     }
+    //     else {
+    //       p5.fill(255-color_val, 255-color_val, 255-color_val);
+    //     }
+    //   }
+  
+  //     p5.arc(
+  //       p5.width / 2,
+  //       p5.height / 2,
+  //       diameter,
+  //       diameter,
+  //       lastAngle,
+  //       lastAngle + p5.radians(current_data[i])
+  //     );
+  //     lastAngle += p5.radians(current_data[i]);
+      
+  //   }
+  // }
   
     // p5.pop();
-  }
+  
 
 
   //!Class: your 2D keyPressed functionality here
