@@ -197,7 +197,7 @@ var house_3D = function (p5) {
     // for (i = 0; i < _elementList.length; i++) _elementList[i].draw3D(p5); // Draw the 3D elements
     
     p5.scale(zoom);
-    p5.translate(30,0,100);
+    p5.translate(300,0,100);
 
     //////////////////////////////    FLOOR 1          //////////////////////
     p5.push();
@@ -252,7 +252,17 @@ var house_3D = function (p5) {
     p5.noStroke();
 
     // p5.ambientMaterial(241, 146, 130); // MATERIAL #3
-    p5.ambientMaterial(fridge_color.r, fridge_color.g, fridge_color.b);
+    // p5.ambientMaterial(fridge_color.r, fridge_color.g, fridge_color.b);
+    
+    // p5.ambientMaterial(fridge_color.r, fridge_color.g, fridge_color.b);
+    
+    for (let i = 0; i < appliance_list.length; i++) {
+      if (appliance_list[i].name == 'fridge'){
+        p5.ambientMaterial(appliance_list[i].current_color.r, appliance_list[i].current_color.g, appliance_list[i].current_color.b)
+      }
+    }
+      
+
 
     // TRANSFORMATIONS
     p5.translate(-187, 60, 30); // move to its new location
@@ -264,7 +274,14 @@ var house_3D = function (p5) {
     //////////////////////////////    DRYER          //////////////////////
     p5.push();
     p5.noStroke();
-    p5.ambientMaterial(241, 146, 130);
+
+    // p5.ambientMaterial(241, 146, 130);
+    for (let i = 0; i < appliance_list.length; i++) {
+      if (appliance_list[i].name == 'dryer'){
+        p5.ambientMaterial(appliance_list[i].current_color.r, appliance_list[i].current_color.g, appliance_list[i].current_color.b)
+      }
+    }
+      
     // ambientMaterial(255, 0, 0);
     // TRANSFORMATIONS
     p5.translate(-380, 125, -170)
@@ -278,8 +295,13 @@ var house_3D = function (p5) {
     p5.noStroke();
 
     // p5.ambientMaterial(241, 146, 130);
-    p5.ambientMaterial(oven_color.r, oven_color.g, oven_color.b);
-
+   // p5.ambientMaterial(oven_color.r, oven_color.g, oven_color.b);
+   for (let i = 0; i < appliance_list.length; i++) {
+     if (appliance_list[i].name == 'oven'){
+      p5.ambientMaterial(appliance_list[i].current_color.r, appliance_list[i].current_color.g, appliance_list[i].current_color.b)
+      }
+    }
+    
     // ambientMaterial(255, 0, 0);
     // TRANSFORMATIONS
     // translate(0,0,0)

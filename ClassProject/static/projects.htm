@@ -38,17 +38,28 @@
               type="radio"
               id = "oven"
               name="ElementClassButtons"
-              onclick="change_oven_color()">
+              onclick="change_appliance_color('oven')">
               Oven <br>
             <input 
               type="radio" 
               id = "fridge"
               name="ElementClassButtons" 
-              onclick="change_fridge_color()"> 
+              onclick="change_appliance_color('fridge')"> 
               Fridge <br>
 
-            <input type="radio" name="ElementClassButtons" checked onclick="onClassChange('MultiPointWallElement')"> Dryer <br>
-            <input type="radio" name="ElementClassButtons" onclick="onClassChange('TwoPointBoxElement')"> Car Charger <br>
+            <input 
+              type="radio" 
+              id = "dryer"
+              name="ElementClassButtons" 
+              checked onclick="change_appliance_color('dryer')"> 
+              Dryer <br>
+              
+            <!-- <input 
+              type="radio"
+              id = "car_charger"
+              name="ElementClassButtons"
+              onclick="onClassChange('TwoPointBoxElement')"> 
+              Car Charger <br> -->
 
             <h4> Ambient</h4>
             <input type="range" min=0 max=255 id="ambientvalue" onchange="onChangeAmbientValue(this.value)"><br>
